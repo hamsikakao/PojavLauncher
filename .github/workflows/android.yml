@@ -34,6 +34,7 @@ jobs:
           cd app_pojavlauncher/libs
           wget https://github.com/PojavLauncherTeam/LTW/releases/latest/download/ltw-release.aar
 
+    
       - name: Get JRE17
         uses: dawidd6/action-download-artifact@v9
         with:
@@ -43,6 +44,8 @@ jobs:
           repo: PojavLauncherTeam/android-openjdk-build-multiarch
           branch: buildjre17-21
           name: jre17-pojav
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
 
       - name: Get JRE21
         uses: dawidd6/action-download-artifact@v9
