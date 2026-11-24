@@ -36,7 +36,7 @@ jobs:
 
     
       - name: Get JRE17
-        uses: dawidd6/action-download-artifact@v9
+        uses: dawidd6/action-download-artifact@v9        continue-on-error: true
         with:
           workflow: build.yml
           path: app_pojavlauncher/src/main/assets/components/jre-new
